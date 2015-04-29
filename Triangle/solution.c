@@ -1,6 +1,7 @@
 int minimumTotal(int **triangle, int numRows) {
     int i;
     int *result=(int *)malloc(numRows*sizeof(int));
+	int min;
     for(i=0;i<numRows;i++)
     {
         result[i]=triangle[numRows-1][i];
@@ -15,5 +16,7 @@ int minimumTotal(int **triangle, int numRows) {
             result[j]=p<k?p:k;
         }
     }
-    return result[0];
+    min=result[0];
+	free(result);
+	return min;
 }
