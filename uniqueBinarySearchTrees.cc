@@ -1,9 +1,18 @@
-/*************************
-* 这是一个一维DP问题
-* result[i]表示有i个节点的BST的个数
-* result[i]可以通过分别有0,1,2...(i-1)个child来获得
-*************************/
+/** ##
+ * 这是一个一维DP问题
+ * result[i]表示有i个节点的BST的个数
+ * result[i]可以通过分别有0,1,2...(i-1)个child来获得
+ */
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
     int numTrees(int n) {
